@@ -15,11 +15,11 @@ import lombok.ToString;
 @EqualsAndHashCode
 public class StudentDTO {
 
-	private long Id;
+	private Long Id;
 	private String firstName;
 	private String secondName;
-	private int age;
-	private int yearGroup;
+	private Integer age;
+	private Integer yearGroup;
 	
 	
 	

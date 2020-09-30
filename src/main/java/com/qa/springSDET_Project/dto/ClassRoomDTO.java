@@ -18,10 +18,10 @@ import lombok.ToString;
 public class ClassRoomDTO {
 //	Data transfer object
 	//converts our POJO to JSON in this case classRoom to view in the front end.
-	private long Id;
+	private Long Id;
 	private String subject;
 	private String teacherName;
-	private int classSize;
+	private Integer classSize;
 	private List<StudentDTO> students;
 	
 }

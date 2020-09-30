@@ -70,7 +70,7 @@ public class StudentService {
 		//Update
 		public StudentDTO update (StudentDTO studentDTO, Long id) {
 			Student toUpdate = this.repo.findById(id).orElseThrow(StudentNotFound::new);
-			SDETBeanUtils.mergeObject(studentDTO, toUpdate);
+			SDETBeanUtils.mergeNotNull(studentDTO, toUpdate);
 			return this.mapToDo(this.repo.save(toUpdate));
 		}
 	

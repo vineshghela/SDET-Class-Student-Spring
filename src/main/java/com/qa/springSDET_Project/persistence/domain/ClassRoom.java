@@ -1,6 +1,5 @@
 package com.qa.springSDET_Project.persistence.domain;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;

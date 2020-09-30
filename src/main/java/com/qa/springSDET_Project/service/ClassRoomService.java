@@ -70,7 +70,7 @@ private ClassRoom_repo repo;
 	//Update
 	public ClassRoomDTO update (ClassRoomDTO classRoomDTO, Long id) {
 		ClassRoom toUpdate = this.repo.findById(id).orElseThrow(ClassRoomNotFound::new);
-		SDETBeanUtils.mergeObject(classRoomDTO, toUpdate);
+		SDETBeanUtils.mergeNotNull(classRoomDTO, toUpdate);
 		return this.mapToDo(this.repo.save(toUpdate));
 	}
 	
