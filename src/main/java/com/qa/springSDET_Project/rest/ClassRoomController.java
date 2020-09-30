@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qa.springSDET_Project.dto.ClassRoomDTO;
+import com.qa.springSDET_Project.persistence.domain.ClassRoom;
 import com.qa.springSDET_Project.persistence.repository.ClassRoom_repo;
 import com.qa.springSDET_Project.service.ClassRoomService;
 
@@ -37,9 +38,10 @@ public class ClassRoomController {
 
 	//Create
 	@PostMapping("/create")
-	public ResponseEntity<ClassRoomDTO> create(@RequestBody ClassRoomDTO dto){
-		ClassRoomDTO created= this.service.newClass(dto);
-		return new ResponseEntity<>(created,HttpStatus.CREATED);
+	// public res.... <BandDTO> create (@requestBody Band band)
+	public ResponseEntity<ClassRoomDTO> create(@RequestBody ClassRoom dto){
+//		ClassRoomDTO created= this.service.newClass(dto);
+		return new ResponseEntity<>(this.service.newClass(dto),HttpStatus.CREATED);
 	}
 	
 	// Read

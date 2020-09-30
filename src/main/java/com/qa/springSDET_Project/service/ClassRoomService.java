@@ -40,9 +40,10 @@ private ClassRoom_repo repo;
 	}
 	
 	//Create
-	public ClassRoomDTO newClass(ClassRoomDTO classRoomDTO) {
-		ClassRoom toSave = this.mapFromDTO(classRoomDTO);
-		ClassRoom saved = this.repo.save(toSave);
+//	pass in domain class 
+	public ClassRoomDTO newClass(ClassRoom classRoom) {
+//		ClassRoom toSave = this.mapFromDTO(classRoomDTO);
+		ClassRoom saved = this.repo.save(classRoom);
 		return this.mapToDo(saved);
 	}
 //	Read
