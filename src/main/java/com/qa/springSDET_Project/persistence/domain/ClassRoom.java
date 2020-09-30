@@ -3,6 +3,7 @@ package com.qa.springSDET_Project.persistence.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -43,7 +44,7 @@ public class ClassRoom {
 	@Max(28)
 	private int classSize;
 	
-	@OneToMany(mappedBy = "room")
+	@OneToMany(mappedBy = "room",cascade = CascadeType.ALL)
 	private List<Student> students;
 
 	//create a blank class with a subject
