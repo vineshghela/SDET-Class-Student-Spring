@@ -3,6 +3,7 @@ package com.qa.springSDET_Project.persistence.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Max;
@@ -31,7 +32,7 @@ import lombok.ToString;
 public class Student {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long Id;
 	
 	@Column(name="first_name")
