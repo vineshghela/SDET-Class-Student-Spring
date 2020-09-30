@@ -33,26 +33,26 @@ public class Student {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long Id;
+	private Long Id;
 	
 	@Column(name="first_name")
-//	@NotNull
-//	@Size(min=2,max=40)
+	@NotNull
+	@Size(min=2,max=40)
 	private String firstName;
 	
 	@Column(name="Second_Name")
-//	@NotNull
-//	@Size(min=2,max=40)
+	@NotNull
+	@Size(min=2,max=40)
 	private String secondName;
 	
 	@Column(name="Age")
-//	@Min(5)
-//	@Max(12)
-	private int age;
+	@Min(5)
+	@Max(12)
+	private Integer age;
 	
 	@Column(name="Year_Group")
-//	@Min(1)
-//	@Max(6)
+	@Min(1)
+	@Max(6)
 	private int yearGroup;
 
 //	public Student(@NotNull @Size(min = 2, max = 40) String firstName,

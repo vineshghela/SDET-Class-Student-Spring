@@ -30,7 +30,7 @@ public class ClassRoom {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long Id;
+	private Long Id;
 	
 	@Column(name ="Subject",unique=true)
 	private String subject;
@@ -41,7 +41,7 @@ public class ClassRoom {
 	@Column(name="Max_class_size")
 	@Min(2)
 	@Max(28)
-	private int classSize;
+	private Integer classSize;
 	
 	@OneToMany(mappedBy = "room",cascade = CascadeType.ALL)
 	private List<Student> students;
